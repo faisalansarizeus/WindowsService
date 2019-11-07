@@ -1,0 +1,1 @@
+[18:53:44] - Service has been started[18:53:54] - {0} ms elapsed.[18:53:57] - Service has been stopped.

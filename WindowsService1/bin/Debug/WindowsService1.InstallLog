@@ -1,0 +1,180 @@
+﻿Installing assembly 'C:\Users\vandana.maurya\source\repos\WindowsService1\WindowsService1\bin\Debug\WindowsService1.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\vandana.maurya\source\repos\WindowsService1\WindowsService1\bin\Debug\WindowsService1.InstallLog
+   assemblypath = C:\Users\vandana.maurya\source\repos\WindowsService1\WindowsService1\bin\Debug\WindowsService1.exe
+Installing service WindowsService.NET...
+Service WindowsService.NET has been successfully installed.
+Creating EventLog source WindowsService.NET in log Application...
+Committing assembly 'C:\Users\vandana.maurya\source\repos\WindowsService1\WindowsService1\bin\Debug\WindowsService1.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\vandana.maurya\source\repos\WindowsService1\WindowsService1\bin\Debug\WindowsService1.InstallLog
+   assemblypath = C:\Users\vandana.maurya\source\repos\WindowsService1\WindowsService1\bin\Debug\WindowsService1.exe
+Uninstalling assembly 'C:\Users\vandana.maurya\source\repos\WindowsService1\WindowsService1\bin\Debug\WindowsService1.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\vandana.maurya\source\repos\WindowsService1\WindowsService1\bin\Debug\WindowsService1.InstallLog
+   assemblypath = C:\Users\vandana.maurya\source\repos\WindowsService1\WindowsService1\bin\Debug\WindowsService1.exe
+Removing EventLog source WindowsService.NET.
+Service WindowsService.NET is being removed from the system...
+Service WindowsService.NET was successfully removed from the system.
+Installing assembly 'C:\Users\vandana.maurya\source\repos\WindowsService1\WindowsService1\bin\Debug\WindowsService1.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\vandana.maurya\source\repos\WindowsService1\WindowsService1\bin\Debug\WindowsService1.InstallLog
+   assemblypath = C:\Users\vandana.maurya\source\repos\WindowsService1\WindowsService1\bin\Debug\WindowsService1.exe
+   logtoconsole = 
+Installing service WindowsService.NET...
+Service WindowsService.NET has been successfully installed.
+Creating EventLog source WindowsService.NET in log Application...
+Committing assembly 'C:\Users\vandana.maurya\source\repos\WindowsService1\WindowsService1\bin\Debug\WindowsService1.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\vandana.maurya\source\repos\WindowsService1\WindowsService1\bin\Debug\WindowsService1.InstallLog
+   assemblypath = C:\Users\vandana.maurya\source\repos\WindowsService1\WindowsService1\bin\Debug\WindowsService1.exe
+   logtoconsole = 
+Installing assembly 'C:\Users\vandana.maurya\source\repos\WindowsService1\WindowsService1\bin\Debug\WindowsService1.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\vandana.maurya\source\repos\WindowsService1\WindowsService1\bin\Debug\WindowsService1.InstallLog
+   assemblypath = C:\Users\vandana.maurya\source\repos\WindowsService1\WindowsService1\bin\Debug\WindowsService1.exe
+   logtoconsole = 
+Installing service WindowsService.NET...
+Creating EventLog source WindowsService.NET in log Application...
+Rolling back assembly 'C:\Users\vandana.maurya\source\repos\WindowsService1\WindowsService1\bin\Debug\WindowsService1.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\vandana.maurya\source\repos\WindowsService1\WindowsService1\bin\Debug\WindowsService1.InstallLog
+   assemblypath = C:\Users\vandana.maurya\source\repos\WindowsService1\WindowsService1\bin\Debug\WindowsService1.exe
+   logtoconsole = 
+Restoring event log to previous state for source WindowsService.NET.
+Uninstalling assembly 'C:\Users\vandana.maurya\source\repos\WindowsService1\WindowsService1\bin\Debug\WindowsService1.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\vandana.maurya\source\repos\WindowsService1\WindowsService1\bin\Debug\WindowsService1.InstallLog
+   assemblypath = C:\Users\vandana.maurya\source\repos\WindowsService1\WindowsService1\bin\Debug\WindowsService1.exe
+Removing EventLog source WindowsService.NET.
+Service WindowsService.NET is being removed from the system...
+Service WindowsService.NET was successfully removed from the system.
+Installing assembly 'C:\Users\vandana.maurya\source\repos\WindowsService1\WindowsService1\bin\Debug\WindowsService1.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\vandana.maurya\source\repos\WindowsService1\WindowsService1\bin\Debug\WindowsService1.InstallLog
+   assemblypath = C:\Users\vandana.maurya\source\repos\WindowsService1\WindowsService1\bin\Debug\WindowsService1.exe
+   logtoconsole = 
+Installing service WindowsService.NET...
+Service WindowsService.NET has been successfully installed.
+Creating EventLog source WindowsService.NET in log Application...
+Committing assembly 'C:\Users\vandana.maurya\source\repos\WindowsService1\WindowsService1\bin\Debug\WindowsService1.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\vandana.maurya\source\repos\WindowsService1\WindowsService1\bin\Debug\WindowsService1.InstallLog
+   assemblypath = C:\Users\vandana.maurya\source\repos\WindowsService1\WindowsService1\bin\Debug\WindowsService1.exe
+   logtoconsole = 
+Uninstalling assembly 'C:\Users\vandana.maurya\source\repos\WindowsService1\WindowsService1\bin\Debug\WindowsService1.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\vandana.maurya\source\repos\WindowsService1\WindowsService1\bin\Debug\WindowsService1.InstallLog
+   assemblypath = C:\Users\vandana.maurya\source\repos\WindowsService1\WindowsService1\bin\Debug\WindowsService1.exe
+Removing EventLog source WindowsService.NET.
+Service WindowsService.NET is being removed from the system...
+Service WindowsService.NET was successfully removed from the system.
+Installing assembly 'C:\Users\vandana.maurya\source\repos\WindowsService1\WindowsService1\bin\Debug\WindowsService1.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\vandana.maurya\source\repos\WindowsService1\WindowsService1\bin\Debug\WindowsService1.InstallLog
+   assemblypath = C:\Users\vandana.maurya\source\repos\WindowsService1\WindowsService1\bin\Debug\WindowsService1.exe
+   logtoconsole = 
+Installing service WindowsService.NET...
+Service WindowsService.NET has been successfully installed.
+Creating EventLog source WindowsService.NET in log Application...
+Committing assembly 'C:\Users\vandana.maurya\source\repos\WindowsService1\WindowsService1\bin\Debug\WindowsService1.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\vandana.maurya\source\repos\WindowsService1\WindowsService1\bin\Debug\WindowsService1.InstallLog
+   assemblypath = C:\Users\vandana.maurya\source\repos\WindowsService1\WindowsService1\bin\Debug\WindowsService1.exe
+   logtoconsole = 
+Uninstalling assembly 'C:\Users\vandana.maurya\source\repos\WindowsService1\WindowsService1\bin\Debug\WindowsService1.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\vandana.maurya\source\repos\WindowsService1\WindowsService1\bin\Debug\WindowsService1.InstallLog
+   assemblypath = C:\Users\vandana.maurya\source\repos\WindowsService1\WindowsService1\bin\Debug\WindowsService1.exe
+Removing EventLog source WindowsService.NET.
+Service WindowsService.NET is being removed from the system...
+Service WindowsService.NET was successfully removed from the system.
+Installing assembly 'C:\Users\vandana.maurya\source\repos\WindowsService1\WindowsService1\bin\Debug\WindowsService1.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\vandana.maurya\source\repos\WindowsService1\WindowsService1\bin\Debug\WindowsService1.InstallLog
+   assemblypath = C:\Users\vandana.maurya\source\repos\WindowsService1\WindowsService1\bin\Debug\WindowsService1.exe
+   logtoconsole = 
+Installing service WindowsService.NET...
+Service WindowsService.NET has been successfully installed.
+Creating EventLog source WindowsService.NET in log Application...
+Committing assembly 'C:\Users\vandana.maurya\source\repos\WindowsService1\WindowsService1\bin\Debug\WindowsService1.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\vandana.maurya\source\repos\WindowsService1\WindowsService1\bin\Debug\WindowsService1.InstallLog
+   assemblypath = C:\Users\vandana.maurya\source\repos\WindowsService1\WindowsService1\bin\Debug\WindowsService1.exe
+   logtoconsole = 
+Uninstalling assembly 'C:\Users\vandana.maurya\source\repos\WindowsService1\WindowsService1\bin\Debug\WindowsService1.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\vandana.maurya\source\repos\WindowsService1\WindowsService1\bin\Debug\WindowsService1.InstallLog
+   assemblypath = C:\Users\vandana.maurya\source\repos\WindowsService1\WindowsService1\bin\Debug\WindowsService1.exe
+Removing EventLog source PassportServiceBusClient.
+Warning: The source PassportServiceBusClient is not registered on the local machine.
+Service PassportServiceBusClient is being removed from the system...
+An exception occurred during the uninstallation of the System.ServiceProcess.ServiceInstaller installer.
+System.ComponentModel.Win32Exception: The specified service does not exist as an installed service
+An exception occurred while uninstalling. This exception will be ignored and the uninstall will continue. However, the application might not be fully uninstalled after the uninstall is complete.
+Uninstalling assembly 'C:\Users\vandana.maurya\source\repos\WindowsService1\WindowsService1\bin\Debug\WindowsService1.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\vandana.maurya\source\repos\WindowsService1\WindowsService1\bin\Debug\WindowsService1.InstallLog
+   assemblypath = C:\Users\vandana.maurya\source\repos\WindowsService1\WindowsService1\bin\Debug\WindowsService1.exe
+Removing EventLog source PassportServiceBusClient.
+Warning: The source PassportServiceBusClient is not registered on the local machine.
+Service PassportServiceBusClient is being removed from the system...
+An exception occurred during the uninstallation of the System.ServiceProcess.ServiceInstaller installer.
+System.ComponentModel.Win32Exception: The specified service does not exist as an installed service
+An exception occurred while uninstalling. This exception will be ignored and the uninstall will continue. However, the application might not be fully uninstalled after the uninstall is complete.
+Installing assembly 'C:\Users\vandana.maurya\source\repos\WindowsService1\WindowsService1\bin\Debug\WindowsService1.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\vandana.maurya\source\repos\WindowsService1\WindowsService1\bin\Debug\WindowsService1.InstallLog
+   assemblypath = C:\Users\vandana.maurya\source\repos\WindowsService1\WindowsService1\bin\Debug\WindowsService1.exe
+   logtoconsole = 
+Installing service PassportServiceBusClient...
+Service PassportServiceBusClient has been successfully installed.
+Creating EventLog source PassportServiceBusClient in log Application...
+Committing assembly 'C:\Users\vandana.maurya\source\repos\WindowsService1\WindowsService1\bin\Debug\WindowsService1.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\vandana.maurya\source\repos\WindowsService1\WindowsService1\bin\Debug\WindowsService1.InstallLog
+   assemblypath = C:\Users\vandana.maurya\source\repos\WindowsService1\WindowsService1\bin\Debug\WindowsService1.exe
+   logtoconsole = 
+Uninstalling assembly 'C:\Users\vandana.maurya\source\repos\WindowsService1\WindowsService1\bin\Debug\WindowsService1.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\vandana.maurya\source\repos\WindowsService1\WindowsService1\bin\Debug\WindowsService1.InstallLog
+   assemblypath = C:\Users\vandana.maurya\source\repos\WindowsService1\WindowsService1\bin\Debug\WindowsService1.exe
+Removing EventLog source PassportServiceBusClient.
+Service PassportServiceBusClient is being removed from the system...
+Service PassportServiceBusClient was successfully removed from the system.
+Installing assembly 'C:\Users\vandana.maurya\source\repos\WindowsService1\WindowsService1\bin\Debug\WindowsService1.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\vandana.maurya\source\repos\WindowsService1\WindowsService1\bin\Debug\WindowsService1.InstallLog
+   assemblypath = C:\Users\vandana.maurya\source\repos\WindowsService1\WindowsService1\bin\Debug\WindowsService1.exe
+   logtoconsole = 
+Installing service PassportServiceBusClient...
+Service PassportServiceBusClient has been successfully installed.
+Creating EventLog source PassportServiceBusClient in log Application...
+Committing assembly 'C:\Users\vandana.maurya\source\repos\WindowsService1\WindowsService1\bin\Debug\WindowsService1.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\vandana.maurya\source\repos\WindowsService1\WindowsService1\bin\Debug\WindowsService1.InstallLog
+   assemblypath = C:\Users\vandana.maurya\source\repos\WindowsService1\WindowsService1\bin\Debug\WindowsService1.exe
+   logtoconsole = 
