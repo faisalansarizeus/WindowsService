@@ -1,0 +1,231 @@
+Received message: SequenceNumber:6259 Body:{"TimeStamp":"2019-11-12T13:23:49.7481934Z","Reason":"create","PrimaryKey":"[groupID, 686]/","Data":"{\"groupID\":686,\"groupName\":\"mahalaxmi\",\"groupDescription\":\"\",\"createdUserID\":42608,\"createdDate\":\"2019-11-12T13:23:49.7169437+00:00\",\"lastModifiedUserID\":42608,\"lastModifiedDate\":\"2019-11-12T13:23:49.7169437+00:00\",\"deleted\":false}"}
+Received Query: set identity_insert tbl_groups on ; insert into  tbl_groups (groupID,groupName,groupDescription,createdUserID,createdDate,lastModifiedUserID,lastModifiedDate,deleted) values (686,'mahalaxmi','',42608,'2019-11-12 13:23:49',42608,'2019-11-12 13:23:49',0) ; set identity_insert tbl_groups off 
+Received message: SequenceNumber:6264 Body:{"TimeStamp":"2019-11-12T13:37:45.9880406Z","Reason":"update","PrimaryKey":"[groupID, 686]/","Data":"{\"groupID\":686,\"groupName\":\"mahalaxmi\",\"groupDescription\":\"\",\"createdUserID\":42608,\"createdDate\":\"2019-11-12T13:23:49.717\",\"lastModifiedUserID\":42608,\"lastModifiedDate\":\"2019-11-12T13:37:45.9724158+00:00\",\"deleted\":false}"}
+Received Query: update tbl_groups set groupName='mahalaxmi' , groupDescription='' , createdUserID=42608 , createdDate='2019-11-12 13:23:49' , lastModifiedUserID=42608 , lastModifiedDate='2019-11-12 13:37:45' , deleted=0 where groupID= 686
+Received message: SequenceNumber:6268 Body:{"TimeStamp":"2019-11-12T13:39:19.8794475Z","Reason":"update","PrimaryKey":"[groupID, 616]/","Data":"{\"groupID\":616,\"groupName\":\"zeusgrp\",\"groupDescription\":\"\",\"createdUserID\":42608,\"createdDate\":\"2018-05-30T09:28:13.33\",\"lastModifiedUserID\":42608,\"lastModifiedDate\":\"2019-11-12T13:39:19.8794475+00:00\",\"deleted\":false}"}
+Received Query: update tbl_groups set groupName='zeusgrp' , groupDescription='' , createdUserID=42608 , createdDate='2018-05-30 09:28:13' , lastModifiedUserID=42608 , lastModifiedDate='2019-11-12 13:39:19' , deleted=0 where groupID= 616
+Received message: SequenceNumber:6271 Body:{"TimeStamp":"2019-11-12T13:40:34.9890701Z","Reason":"create","PrimaryKey":"[groupID, 616]/[userID, 97962]/","Data":"{\"groupID\":616,\"userID\":97962,\"createdUserID\":42608,\"createdDate\":\"2019-11-12T13:40:34.9734438+00:00\"}"}
+Received Query: set identity_insert tbl_group_members on ; insert into  tbl_group_members (groupID,userID,createdUserID,createdDate) values (616,97962,42608,'2019-11-12 13:40:34') ; set identity_insert tbl_group_members off 
+Received message: SequenceNumber:6273 Body:{"TimeStamp":"2019-11-12T14:10:02.5790525Z","Reason":"update","PrimaryKey":"[applicationID, 21]/[userID, 215889]/","Data":"{\"id\":117773,\"applicationID\":21,\"userID\":215889,\"enabled\":false,\"userRoleId\":11,\"teacherAdminStatus\":1,\"dateDeleted\":null,\"TermsAndConditionsAcceptedOn\":\"2019-10-11T09:45:37.203\"}"}
+Received Query: update tbl_application_user set id=117773 , enabled=0 , userRoleId=11 , teacherAdminStatus=1 , dateDeleted=null , TermsAndConditionsAcceptedOn='2019-10-11 09:45:37' where applicationID= 21 and userID= 215889
+Received message: SequenceNumber:6275 Body:{"TimeStamp":"2019-11-12T14:20:54.0686031Z","Reason":"update","PrimaryKey":"[applicationID, 21]/[userID, 215890]/","Data":"{\"id\":117774,\"applicationID\":21,\"userID\":215890,\"enabled\":true,\"userRoleId\":12,\"teacherAdminStatus\":1,\"dateDeleted\":null,\"TermsAndConditionsAcceptedOn\":\"2019-10-10T13:49:42.523\"}"}
+Message handler encountered an exception System.ServiceModel.EndpointNotFoundException: There was no endpoint listening at https://demo.dynamic-learning.co.uk/ws/DatabaseSyncService.asmx that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details. ---> System.Net.WebException: The remote name could not be resolved: 'demo.dynamic-learning.co.uk'
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at WindowsService1.DLSyncService.DatabaseSyncServiceSoap.ReceiveMessage(String message, Int64 sequenceNumber, String tableName)
+   at WindowsService1.DLSyncService.DatabaseSyncServiceSoapClient.ReceiveMessage(String message, Int64 sequenceNumber, String tableName) in D:\Hodder Files\WindowsService\WindowsService1\Connected Services\DLSyncService\Reference.cs:line 69
+   at WindowsService1.Service1.<ProcessMessagesAsync>d__9.MoveNext() in D:\Hodder Files\WindowsService\WindowsService1\Service1.cs:line 91
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Azure.ServiceBus.MessageReceivePump.<MessageDispatchTask>d__13.MoveNext().
+Exception context for troubleshooting:
+- Endpoint: huxheddmbmrk01.servicebus.windows.net
+- Entity Path: huxhedd-q-mark03
+- Executing Action: UserCallback
+Received message: SequenceNumber:6276 Body:{"TimeStamp":"2019-11-12T14:58:46.6312173Z","Reason":"update","PrimaryKey":"[applicationID, 21]/[userID, 215889]/","Data":"{\"id\":117773,\"applicationID\":21,\"userID\":215889,\"enabled\":false,\"userRoleId\":11,\"teacherAdminStatus\":1,\"dateDeleted\":null,\"TermsAndConditionsAcceptedOn\":\"2019-10-11T09:45:37.203\"}"}
+Message handler encountered an exception System.ServiceModel.EndpointNotFoundException: There was no endpoint listening at https://demo.dynamic-learning.co.uk/ws/DatabaseSyncService.asmx that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details. ---> System.Net.WebException: The remote name could not be resolved: 'demo.dynamic-learning.co.uk'
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at WindowsService1.DLSyncService.DatabaseSyncServiceSoap.ReceiveMessage(String message, Int64 sequenceNumber, String tableName)
+   at WindowsService1.DLSyncService.DatabaseSyncServiceSoapClient.ReceiveMessage(String message, Int64 sequenceNumber, String tableName) in D:\Hodder Files\WindowsService\WindowsService1\Connected Services\DLSyncService\Reference.cs:line 69
+   at WindowsService1.Service1.<ProcessMessagesAsync>d__9.MoveNext() in D:\Hodder Files\WindowsService\WindowsService1\Service1.cs:line 91
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Azure.ServiceBus.MessageReceivePump.<MessageDispatchTask>d__13.MoveNext().
+Exception context for troubleshooting:
+- Endpoint: huxheddmbmrk01.servicebus.windows.net
+- Entity Path: huxhedd-q-mark03
+- Executing Action: UserCallback
+Received message: SequenceNumber:6277 Body:{"TimeStamp":"2019-11-12T15:01:07.1636391Z","Reason":"update","PrimaryKey":"[applicationID, 21]/[userID, 215889]/","Data":"{\"id\":117773,\"applicationID\":21,\"userID\":215889,\"enabled\":true,\"userRoleId\":11,\"teacherAdminStatus\":1,\"dateDeleted\":null,\"TermsAndConditionsAcceptedOn\":\"2019-10-11T09:45:37.203\"}"}
+Message handler encountered an exception System.ServiceModel.EndpointNotFoundException: There was no endpoint listening at https://demo.dynamic-learning.co.uk/ws/DatabaseSyncService.asmx that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details. ---> System.Net.WebException: The remote name could not be resolved: 'demo.dynamic-learning.co.uk'
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at WindowsService1.DLSyncService.DatabaseSyncServiceSoap.ReceiveMessage(String message, Int64 sequenceNumber, String tableName)
+   at WindowsService1.DLSyncService.DatabaseSyncServiceSoapClient.ReceiveMessage(String message, Int64 sequenceNumber, String tableName) in D:\Hodder Files\WindowsService\WindowsService1\Connected Services\DLSyncService\Reference.cs:line 69
+   at WindowsService1.Service1.<ProcessMessagesAsync>d__9.MoveNext() in D:\Hodder Files\WindowsService\WindowsService1\Service1.cs:line 91
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Azure.ServiceBus.MessageReceivePump.<MessageDispatchTask>d__13.MoveNext().
+Exception context for troubleshooting:
+- Endpoint: huxheddmbmrk01.servicebus.windows.net
+- Entity Path: huxhedd-q-mark03
+- Executing Action: UserCallback
+Received message: SequenceNumber:6279 Body:{"TimeStamp":"2019-11-12T15:05:32.8525909Z","Reason":"update","PrimaryKey":"[applicationID, 21]/[userID, 215889]/","Data":"{\"id\":117773,\"applicationID\":21,\"userID\":215889,\"enabled\":true,\"userRoleId\":11,\"teacherAdminStatus\":1,\"dateDeleted\":null,\"TermsAndConditionsAcceptedOn\":\"2019-10-11T09:45:37.203\"}"}
+Message handler encountered an exception System.ServiceModel.EndpointNotFoundException: There was no endpoint listening at https://demo.dynamic-learning.co.uk/ws/DatabaseSyncService.asmx that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details. ---> System.Net.WebException: The remote name could not be resolved: 'demo.dynamic-learning.co.uk'
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at WindowsService1.DLSyncService.DatabaseSyncServiceSoap.ReceiveMessage(String message, Int64 sequenceNumber, String tableName)
+   at WindowsService1.DLSyncService.DatabaseSyncServiceSoapClient.ReceiveMessage(String message, Int64 sequenceNumber, String tableName) in D:\Hodder Files\WindowsService\WindowsService1\Connected Services\DLSyncService\Reference.cs:line 69
+   at WindowsService1.Service1.<ProcessMessagesAsync>d__9.MoveNext() in D:\Hodder Files\WindowsService\WindowsService1\Service1.cs:line 91
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Azure.ServiceBus.MessageReceivePump.<MessageDispatchTask>d__13.MoveNext().
+Exception context for troubleshooting:
+- Endpoint: huxheddmbmrk01.servicebus.windows.net
+- Entity Path: huxhedd-q-mark03
+- Executing Action: UserCallback
+Received message: SequenceNumber:6280 Body:{"TimeStamp":"2019-11-12T15:06:03.4622268Z","Reason":"update","PrimaryKey":"[applicationID, 21]/[userID, 215890]/","Data":"{\"id\":117774,\"applicationID\":21,\"userID\":215890,\"enabled\":false,\"userRoleId\":12,\"teacherAdminStatus\":1,\"dateDeleted\":null,\"TermsAndConditionsAcceptedOn\":\"2019-10-10T13:49:42.523\"}"}
+Message handler encountered an exception System.ServiceModel.EndpointNotFoundException: There was no endpoint listening at https://demo.dynamic-learning.co.uk/ws/DatabaseSyncService.asmx that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details. ---> System.Net.WebException: The remote name could not be resolved: 'demo.dynamic-learning.co.uk'
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at WindowsService1.DLSyncService.DatabaseSyncServiceSoap.ReceiveMessage(String message, Int64 sequenceNumber, String tableName)
+   at WindowsService1.DLSyncService.DatabaseSyncServiceSoapClient.ReceiveMessage(String message, Int64 sequenceNumber, String tableName) in D:\Hodder Files\WindowsService\WindowsService1\Connected Services\DLSyncService\Reference.cs:line 69
+   at WindowsService1.Service1.<ProcessMessagesAsync>d__9.MoveNext() in D:\Hodder Files\WindowsService\WindowsService1\Service1.cs:line 91
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Azure.ServiceBus.MessageReceivePump.<MessageDispatchTask>d__13.MoveNext().
+Exception context for troubleshooting:
+- Endpoint: huxheddmbmrk01.servicebus.windows.net
+- Entity Path: huxhedd-q-mark03
+- Executing Action: UserCallback
+Received message: SequenceNumber:6281 Body:{"TimeStamp":"2019-11-12T15:15:49.9505583Z","Reason":"update","PrimaryKey":"[applicationID, 21]/[userID, 215889]/","Data":"{\"id\":117773,\"applicationID\":21,\"userID\":215889,\"enabled\":false,\"userRoleId\":11,\"teacherAdminStatus\":1,\"dateDeleted\":null,\"TermsAndConditionsAcceptedOn\":\"2019-10-11T09:45:37.203\"}"}
+Message handler encountered an exception System.ServiceModel.EndpointNotFoundException: There was no endpoint listening at https://demo.dynamic-learning.co.uk/ws/DatabaseSyncService.asmx that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details. ---> System.Net.WebException: The remote name could not be resolved: 'demo.dynamic-learning.co.uk'
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at WindowsService1.DLSyncService.DatabaseSyncServiceSoap.ReceiveMessage(String message, Int64 sequenceNumber, String tableName)
+   at WindowsService1.DLSyncService.DatabaseSyncServiceSoapClient.ReceiveMessage(String message, Int64 sequenceNumber, String tableName) in D:\Hodder Files\WindowsService\WindowsService1\Connected Services\DLSyncService\Reference.cs:line 69
+   at WindowsService1.Service1.<ProcessMessagesAsync>d__9.MoveNext() in D:\Hodder Files\WindowsService\WindowsService1\Service1.cs:line 91
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Azure.ServiceBus.MessageReceivePump.<MessageDispatchTask>d__13.MoveNext().
+Exception context for troubleshooting:
+- Endpoint: huxheddmbmrk01.servicebus.windows.net
+- Entity Path: huxhedd-q-mark03
+- Executing Action: UserCallback
+Received message: SequenceNumber:6282 Body:{"TimeStamp":"2019-11-12T15:17:03.7791043Z","Reason":"update","PrimaryKey":"[applicationID, 21]/[userID, 215889]/","Data":"{\"id\":117773,\"applicationID\":21,\"userID\":215889,\"enabled\":true,\"userRoleId\":11,\"teacherAdminStatus\":1,\"dateDeleted\":null,\"TermsAndConditionsAcceptedOn\":\"2019-10-11T09:45:37.203\"}"}
+Message handler encountered an exception System.ServiceModel.EndpointNotFoundException: There was no endpoint listening at https://demo.dynamic-learning.co.uk/ws/DatabaseSyncService.asmx that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details. ---> System.Net.WebException: The remote name could not be resolved: 'demo.dynamic-learning.co.uk'
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at WindowsService1.DLSyncService.DatabaseSyncServiceSoap.ReceiveMessage(String message, Int64 sequenceNumber, String tableName)
+   at WindowsService1.DLSyncService.DatabaseSyncServiceSoapClient.ReceiveMessage(String message, Int64 sequenceNumber, String tableName) in D:\Hodder Files\WindowsService\WindowsService1\Connected Services\DLSyncService\Reference.cs:line 69
+   at WindowsService1.Service1.<ProcessMessagesAsync>d__9.MoveNext() in D:\Hodder Files\WindowsService\WindowsService1\Service1.cs:line 91
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Azure.ServiceBus.MessageReceivePump.<MessageDispatchTask>d__13.MoveNext().
+Exception context for troubleshooting:
+- Endpoint: huxheddmbmrk01.servicebus.windows.net
+- Entity Path: huxhedd-q-mark03
+- Executing Action: UserCallback
+
+
+
+-------------------------------------------------------------------------------------------------------------
